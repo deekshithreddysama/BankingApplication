@@ -3,6 +3,16 @@
 <head>
     <title>BankingApplication</title>
     <link rel="stylesheet" href="../StyleSheets/External/externalStyle.css">
+    <script>
+        function myFunction() {
+            sessionStorage.setItem('FirstName', document.getElementById('firstname').value);
+            sessionStorage.setItem('LastName', document.getElementById('lastname').value);
+            sessionStorage.setItem('DateOfBirth', document.getElementById('dateofbirth').value);
+            sessionStorage.setItem('ShortName', document.getElementById('shortname').value);
+            sessionStorage.setItem('Email', document.getElementById('email').value);
+            sessionStorage.setItem('Mobile Number', document.getElementById('mobilenumber').value);
+         }
+    </script>
 </head>
 <body>
     <header>
@@ -22,15 +32,15 @@
         </nav>
 
         <article>
-            <form>
+            <form onclick="myFunction()" action="./IdentityInfo.html">
                 <ul class="formStyle">
-                    <li><label>First Name</label><input type="text" name="firstname" /></li>
+                    <li><label>First Name</label><input type="text" id="firstname" /></li>
                     <li><label>Last Name</label><input type="text" name="lastname" /></li>
-                    <li><label>Alias Name</label><input type="text" name="email" /></li>
+                    <li><label>Short Name</label><input type="text" name="shortname" /></li>
                     <li><label>Date Of Birth</label><input type="text" name="dateofbirth" /></li>
                     <li><label>Email</label><input type="text" name="email" /></li>
                     <li><label>Mobile Number</label><input type="text" name="mobilenumber" /></li>
-                    <li><input type="submit" value="Submit" /></li>
+                    <li><input type="submit" value="Proceed to Identity Information" /></li>
                 </ul>
 
             </form>

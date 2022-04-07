@@ -3,6 +3,16 @@
 <head>
     <title>BankingApplication</title>
     <link rel="stylesheet" href="../StyleSheets/External/externalStyle.css">
+    <script>
+        function myFunction() {
+            sessionStorage.setItem('SSN', document.getElementById('ssn').value);
+            sessionStorage.setItem('DriverLicenseNumber', document.getElementById('driverlicense').value);
+            sessionStorage.setItem('IssueDate', document.getElementById('issuedate').value);
+            sessionStorage.setItem('ExpiryDate', document.getElementById('expirydate').value);
+            sessionStorage.setItem('IssuedCountry', document.getElementById('issuedcountry').value);
+            sessionStorage.setItem('IssuedState', document.getElementById('issuedstate').value);
+         }
+    </script>
 </head>
 <body>
     <header>
@@ -22,7 +32,7 @@
         </nav>
 
         <article>
-            <form>
+            <form onclick="myFunction()" action="./AddressInfo.html">
                 <ul class="formStyle">
                     <li><label>SSN</label><input type="text" name="ssn" /></li>
                     <li><label>Driver License Number</label><input type="text" name="dlicense" /></li>
@@ -30,7 +40,7 @@
                     <li><label>Expiry Date</label><input type="text" name="edate" /></li>
                     <li><label>Issued Country</label><input type="text" name="icountry" /></li>
                     <li><label>Issued State</label><input type="text" name="istate" /></li>
-                    <li><input type="submit" value="Submit" /></li>
+                    <li><input type="submit" value="Proceed to Address Page" /></li>
                 </ul>
             </form>
         </article>
